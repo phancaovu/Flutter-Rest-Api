@@ -16,3 +16,13 @@ có thể chọn môi trường web
 ![image](https://user-images.githubusercontent.com/66910370/237063081-bf0e1563-78ca-4dad-af94-e4b09c80dca9.png)
 ---
 4. Start with debugging F5
+cài đặt thử viện http trong pub.dev
+Api sử dụng open api 
+email & password login 
+ email: eve.holt@reqres.in
+ password: cityslicka
+Response trả về 
+![image](https://github.com/phancaovu/Flutter-Rest-Api/assets/66910370/a654520f-f656-4c0f-941f-382d8ee074fb)
+App đang trong quá trình update ...........
+
+
