@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:apitutorials/widgets/constants.dart';
-import 'package:apitutorials/widgets/custom_icon.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -14,6 +14,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      body: const Text(
+        'Login SuccessFully',
+        style: TextStyle(
+            fontSize: 35, fontWeight: FontWeight.w800, color: Colors.white),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (idx) {
           setState(() {
@@ -29,18 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home, size: 30),
             label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search, size: 30),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: CustomIcon(),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message, size: 30),
-            label: 'Messages',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person, size: 30),
