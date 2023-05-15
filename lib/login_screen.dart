@@ -1,7 +1,7 @@
 
 import 'dart:convert';
 
-import 'package:apitutorials/Home.dart';
+import 'package:apitutorials/home.dart';
 import 'package:apitutorials/error_screen.dart';
 import 'package:apitutorials/widgets/constants.dart';
 import 'package:flutter/material.dart';
