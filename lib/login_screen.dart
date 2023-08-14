@@ -22,31 +22,39 @@ class _LoginScreenState extends State<LoginScreen> {
   void login(String email, password) async {
     try {
       if (email.isNotEmpty && password.isNotEmpty){
-      http.Response response = await http.post(
-          Uri.parse('https://reqres.in/api/login'),
-          body: {'email': email, 'password': password});
+      //Map<String,String> headers1 = {'Content-Type':'application/json'};
+      var url = Uri.parse('http://localhost:8000/api/login');
+      var response = await http.post(url,
+      headers: {'Content-Type':'application/json'}, // headers1,
+       body: jsonEncode({'username': email, 'password': password}));
+      // ignore: avoid_print
+      // ignore: avoid_print
+      print('Response body: ${response.body}');
 
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body.toString());
 
         // ignore: avoid_print
-        print(data['token']);
+        print(data);
         // ignore: avoid_print
         print('Login successfully');
         Get.to(const HomeScreen());
       } else {
         // ignore: avoid_print
         print('failed');
+        // ignore: avoid_print
+        print(response.body);
         Get.to(const ErrorScreen());
       }}else{
         // ignore: avoid_print
-        print('Email and Password cannot be empty');
+        print('username and Password cannot be empty');
       }
     } catch (e) {
       // ignore: avoid_print
       print(e.toString());
     }
   }
+}
 
   @override
   Widget build(BuildContext context) {
